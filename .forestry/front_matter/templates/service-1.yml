@@ -16,3 +16,65 @@ fields:
     schema:
       format: markdown
   label: Content
+- name: hero_section
+  type: field_group
+  config: {}
+  fields:
+  - name: hero_header
+    type: text
+    config:
+      required: false
+    label: Hero Header
+  - name: hero_content
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Hero Content
+  label: Hero Section
+- name: steps_section
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: subheading
+    type: text
+    config:
+      required: false
+    label: Subheading
+  - name: steps
+    type: field_group_list
+    fields:
+    - name: label
+      type: text
+      config:
+        required: false
+      label: Label
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: icon
+      type: text
+      config:
+        required: false
+      label: Icon
+    - name: content
+      type: text
+      config:
+        required: false
+      label: Content
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Steps
+  label: Steps Section
